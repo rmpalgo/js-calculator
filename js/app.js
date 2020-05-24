@@ -1,23 +1,20 @@
 "use strict";
-let firstNum = "";
-let operator = "";
-let secondNum = "";
+let calculation = "";
 function addToEv() {
     let bns = document.getElementsByTagName("button");
     for (let i = 0; i < bns.length; i++) {
         bns[i].addEventListener("click", function() {
             let data = this.getAttribute("data-id");
-            if(operator === "" && (data !== "/" || data !== "-" || data !== "+" || data !== "*")) {
-                firstNum += data;
-            } else if (operator === "" && (data === "/" || data === "-" || data === "+" || data === "*") ) {
-                operator = data;
-            } else if(operator !== "" && (data !== "/" || data !== "-" || data !== "+" || data !== "*")) {
-                secondNum = data;
+            if(data === "equals") {
+                let total = eval(calculation);
+                console.log(total);
+                document.querySelector("#viewable").setAttribute("value", total);
+                calculation = "";
+                return;
             }
+            calculation += data;
             console.log(data);
-            console.log("firstNum " + firstNum);
-            console.log("operator " + operator);
-            console.log("secondNum " + secondNum);
+            console.log("firstNum " + calculation);
         });
     }
 }
