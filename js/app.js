@@ -24,6 +24,9 @@ function calculate(data) {
     if(data === "equals") {
         try {
             let total = eval(calculation);
+            if(total === Infinity) {
+                total = "¯\\_(ツ)_/¯";
+            }
             document.querySelector("#viewable").setAttribute("value", total);
             calculation = "";
             return;
