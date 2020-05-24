@@ -1,2 +1,3 @@
 # js-calculator
-![](js-calculator.gif)
+
+![](https://giphy.com/gifs/ZbT1gr23sgNXCeC9VX)
