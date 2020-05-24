@@ -1,7 +1,5 @@
 "use strict";
 let calculation = "";
-let firstPart = "";
-let secondPart = "";
 function addToEv() {
     let bns = document.getElementsByTagName("button");
     for (let i = 0; i < bns.length; i++) {
@@ -19,27 +17,15 @@ function calculate(data) {
         document.querySelector("#viewable").setAttribute("value", "0");
         return;
     }
-    if(data === "/" || data === "*" || data === "+" || data === "-") {
-        firstPart = calculation;
-        calculation = "";
-    }
-    if( data === "equals") {
-        secondPart = calculation;
-    }
     if(data === "equals") {
-        console.log("Second part: " + secondPart);
-        let total = eval(firstPart + secondPart);
-        console.log(total);
+        let total = eval(calculation);
         document.querySelector("#viewable").setAttribute("value", total);
         calculation = "";
         return;
     }
     calculation += data;
     console.log(data);
-    console.log("calculation " + calculation);
-    console.log("First part " + firstPart);
-    console.log("Second part " + secondPart);
-
+    console.log("calculation " + calculation);;
     document.querySelector("#viewable").setAttribute("value", calculation);
 }
 
