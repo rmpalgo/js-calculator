@@ -1,3 +1,5 @@
 # js-calculator
 
-![](https://giphy.com/gifs/ZbT1gr23sgNXCeC9VX)
+![alt text][logo]
+
+[logo]: https://media.giphy.com/media/ZbT1gr23sgNXCeC9VX/giphy.gif "Logo Title Text 2"
