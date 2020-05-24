@@ -42,6 +42,7 @@ div input {
     padding: 20px;
     background: #000;
     border: transparent;
+    font-size: 24px;
 }
 
 #row-2 button {
@@ -57,7 +58,16 @@ div input {
     background: orange;
 }
 
+button.focus, button:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
 #zero {
     width: 115px;
+}
+
+button {
+    cursor: pointer;
 }
 
