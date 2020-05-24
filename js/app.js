@@ -11,6 +11,10 @@ function addToEv() {
 }
 
 function calculate(data) {
+    if(data === "undefined") {
+        document.querySelector("#viewable").setAttribute("value", "0");
+        calculation = "";
+    }
     if(data === "AC") {
         console.log("AC CLICKED");
         calculation = "";
@@ -18,14 +22,20 @@ function calculate(data) {
         return;
     }
     if(data === "equals") {
-        let total = eval(calculation);
-        document.querySelector("#viewable").setAttribute("value", total);
-        calculation = "";
-        return;
+        try {
+            let total = eval(calculation);
+            document.querySelector("#viewable").setAttribute("value", total);
+            calculation = "";
+            return;
+        } catch (err) {
+            document.querySelector("#viewable").setAttribute("value", "error");
+            calculation = "";
+            return;
+        }
     }
     calculation += data;
     console.log(data);
-    console.log("calculation " + calculation);;
+    console.log("calculation " + calculation);
     document.querySelector("#viewable").setAttribute("value", calculation);
 }
 
