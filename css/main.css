@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#main-container {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div button {
+    display: block;
+    height: 75px;
+    width: 75px;
+}
+
+div input {
+    display: block;
+    width: 99px;
+    padding: 20px;
+}
+
+#zero {
+    width: 150px;
+}
+
